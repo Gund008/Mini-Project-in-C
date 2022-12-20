@@ -113,7 +113,7 @@ Date :16/12/2022
 
 int Conversion::KMtoMeter(int iNo)
 {
-     int iCnt=1;
+     int iCnt=0;
      int iMeter=1000;
      int iMeter1=0;
     
@@ -141,25 +141,30 @@ double Conversion::RectArea(float iWidth,float iHeight )
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-void  Select()
+int main()
 {
     Conversion obj;
     int Choice=0;
     int iNo=0;
-  
-    cout<<"Please choose the option:"<<endl;
-    cout<<"1.DollerToInteger"<<endl;
-    cout<<"2.SquareMeter"<<endl;
-    cout<<"3.Faharenhait to celciuous"<<endl;
-    cout<<"4. Area of Circle"<<endl;
-    cout<<"5. Kilometer to meter"<<endl;
-    cout<<"6. Area of Reactangle"<<endl;
-    cout<<"Please Select below choice:"<<endl;
-    cin>>Choice;
+
+    printf("Welcome to Function Conversion Application:\n");
+
+    while(1)
+    {
+        cout<<"Please choose the option:"<<endl;
+        cout<<"1:DollerToInteger"<<endl;
+        cout<<"2:SquareMeter"<<endl;
+        cout<<"3:Faharenhait to celciuous"<<endl;
+        cout<<"4:Area of Circle"<<endl;
+        cout<<"5:Kilometer to meter"<<endl;
+        cout<<"6:Area of Reactangle"<<endl;
+        cout<<"Please Select below choice:"<<endl;
+
+        cin>>Choice;
 
     switch(Choice)
     {
-        case '1':
+        case 1:
         {
             int iNo=0;
 
@@ -171,7 +176,7 @@ void  Select()
         }
         break;
        
-        case '2':
+        case 2:
         {
             int iNo=0;
 
@@ -183,7 +188,7 @@ void  Select()
         }
         break;
 
-        case '3':
+        case 3:
         {
             float iNo=0.0;
 
@@ -194,8 +199,9 @@ void  Select()
             cout<<"Faharenhait to celciuous:"<<dRet<<endl;
         }
         break;
+    
 
-        case '4':
+        case 4:
         {
             float iNo=0;
 
@@ -206,8 +212,8 @@ void  Select()
             cout<<"Area of Circle:"<<dRet<<endl;
         }
         break;
-
-        case '5':
+    
+        case 5:
         {
             int iNo=0;
 
@@ -219,7 +225,7 @@ void  Select()
         }
         break;
 
-        case '6':
+        case 6:
         {
             float iNo1,iNo2=0.0f;
             cout<<"Please enter the First Number:\n";
@@ -232,11 +238,17 @@ void  Select()
             cout<<"Area of ReactAngle:"<<dRet<<endl;
         }
         break;  
+
+        case 8:
+        {
+            cout<<"Invalid Option"<<endl;
+        }
+        break;     
     }
+   
+  }
+  return 0;
 }
 
-int main()
-{
-    Select(); //helper function call
-    return 0;
-}
+
+    
